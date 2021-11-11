@@ -1,0 +1,29 @@
+.div1 h1{
+    font-style: italic;
+}
+.div1 label{
+    font-style: italic;
+}
+.div1 button{
+    border-radius: 7px;
+    background-color: white;
+    font-style: italic;
+    margin: 5px;
+
+}
+.div1 p{
+    font-style: italic;
+
+}
+base{
+    background-color: gray;
+}
+.div1{
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+.div1 input{
+    margin:3px;
+
+}

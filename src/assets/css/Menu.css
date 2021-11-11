@@ -1,0 +1,37 @@
+.div2 button{
+    font-weight:bold;
+    font-style: italic;
+    background-color: white;
+    height: 25px;
+    width: 150px;
+    border-radius: 7px;
+    margin: 15px;
+}
+.div1 h1{
+    font-style: italic;
+    font-weight: bold;
+}
+.base{
+    text-align: center;
+    justify-content: center;
+    background-color:gray ;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    margin:20px auto
+
+
+}
+.div2{
+
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+}
+
+.fondo{
+    text-align: center;
+}
+.div1{
+    text-align: center;
+}
