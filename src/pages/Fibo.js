@@ -51,7 +51,7 @@ class Fibo extends Component{
                     <Link to="/" ><button>Volver</button></Link>
                 </form>
             </div>
-                {this.state.total > 0
+                {this.state.total.length > 0
                 &&(
                     <div>
                         <div className="titleHolder">
