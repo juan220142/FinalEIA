@@ -32,11 +32,9 @@ class Fibo extends Component{
         const data = response.data.arra
         console.log(data)
         this.setState({
-            total:data.map((n)=>{
-                (
-                <p>{n}</p>
-                )
-            })
+            total:  data.map((n)=>
+                <li>{n}</li>
+            )
         })
     }
     render(){
@@ -58,7 +56,7 @@ class Fibo extends Component{
                     <div>
                         <div className="titleHolder">
                             <h2>Resultado: </h2>
-                            {this.state.total}
+                            <ul>{this.state.total}</ul>
                         </div>
                     </div>
                 )
