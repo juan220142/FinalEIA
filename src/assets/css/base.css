@@ -1,18 +1,18 @@
 .div1 h1{
-    font-style: italic;
+    font:1rem 'Fira Sans', sans-serif;
 }
 .div1 label{
-    font-style: italic;
+    font:1rem 'Fira Sans', sans-serif;
 }
 .div1 button{
     border-radius: 7px;
     background-color: white;
-    font-style: italic;
+    font:1rem 'Fira Sans', sans-serif;
     margin: 5px;
 
 }
 .div1 p{
-    font-style: italic;
+    font:1rem 'Fira Sans', sans-serif;
 
 }
 base{
