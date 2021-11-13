@@ -39,7 +39,7 @@ class Fibo extends Component{
     }
     render(){
         return(
-            <div className="base">
+            <div className="base2">
             <div className="div1">
                 <h1>Fibonacci</h1>
 
@@ -53,10 +53,10 @@ class Fibo extends Component{
             </div>
                 {this.state.total.length > 0
                 &&(
-                    <div>
+                    <div className="result">
                         <div className="titleHolder">
-                            <h2>Resultado: </h2>
-                            <ul>{this.state.total}</ul>
+                            <h1>Resultado: </h1>
+                            {this.state.total}
                         </div>
                     </div>
                 )
