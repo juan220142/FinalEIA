@@ -47,7 +47,7 @@ class Fibo extends Component{
                     <label for="inp">Ingrese el número :</label>
                     <input type="number" name="inp" onChange={e => this.setState({numero:e.target.value}) }/>
                     <button type="submit">Procesar</button>
-                    <p>Resultado:</p>
+
                     <Link to="/" ><button>Volver</button></Link>
                 </form>
             </div>

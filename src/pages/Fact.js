@@ -42,15 +42,15 @@ class Facts extends Component{
                         <label for="inp">Ingrese el número :</label>
                         <input type="number" name="inp" onChange={e => this.setState({numero:e.target.value}) }/>
                         <button type="submit">Procesar</button>
-                        <p>Resultado:</p>
+
                         <Link to="/"><button>Volver</button></Link>
                     </form>
                 </div>
                 {this.state.total > 0
                 &&(
                     <div>
-                        <div className="titleHolder">
-                            <h2>Resultado{this.state.total}</h2>
+                        <div>
+                            <h1>Resultado: {this.state.total}</h1>
                         </div>
                     </div>
                 )

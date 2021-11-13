@@ -63,8 +63,8 @@ class Fibo extends Component{
                 &&(
                     <div>
                         <div className="titleHolder">
-                            <h2>Perimetro: {this.state.perimetro}</h2>
-                            <h2> Area: {this.state.area}</h2>
+                            <h1>Perimetro: {this.state.perimetro}</h1>
+                            <h1> Area: {this.state.area}</h1>
                         </div>
                     </div>
                 )

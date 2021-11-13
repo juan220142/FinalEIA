@@ -42,7 +42,7 @@ class ACirc extends Component{
                         <label for="inp">Ingrese el radio :</label>
                         <input type="number" name="inp" onChange={e => this.setState({radio:e.target.value}) }/>
                         <button type="submit">Procesar</button>
-                        <p>Resultado:</p>
+
                         <Link to="/"><button>Volver</button></Link>
                     </form>
                 </div>
@@ -50,8 +50,8 @@ class ACirc extends Component{
                 &&(
                     <div>
                         <div className="titleHolder">
-                            <h2>Perimetro: {this.state.perimetro}</h2>
-                            <h2> Area: {this.state.area}</h2>
+                            <h1>Perimetro: {this.state.perimetro}</h1>
+                            <h1> Area: {this.state.area}</h1>
                         </div>
                     </div>
                 )
