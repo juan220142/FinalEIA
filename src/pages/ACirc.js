@@ -1,22 +1,61 @@
 import React,{Component} from "react";
 import "../assets/css/base.css"
 import {Link} from "react-router-dom";
+import Axios from "axios";
 
 class ACirc extends Component{
+    constructor() {
+        super();
+        this.state ={
+            total:0,
+            radio:0
+        }
+        this.onFinish=this.onFinish.bind(this)
+    }
+
+    async onFinish(e) {
+        e.preventDefault()
+
+        const url = 'https://something-usefull.herokuapp.com/api/circ'
+
+        const set = {
+            method: 'get',
+            url: url,
+            headers:{
+                'radio':this.state.radio
+            }
+        };
+
+        const response = await Axios(set)
+
+        const data = response.data
+        console.log(data)
+        this.setState({area:data.Area,perimetro:data.Perimetro})
+    }
     render(){
         return(
             <div className="base">
                 <div className="div1">
                     <h1>Area circulo</h1>
                     <p>ingrese los datos solicitados</p>
-                    <form>
+                    <form onSubmit={this.onFinish}>
                         <label for="inp">Ingrese el radio :</label>
-                        <input type="number" name="inp"/>
-                        <button>Procesar</button>
+                        <input type="number" name="inp" onChange={e => this.setState({radio:e.target.value}) }/>
+                        <button type="submit">Procesar</button>
                         <p>Resultado:</p>
                         <Link to="/"><button>Volver</button></Link>
                     </form>
                 </div>
+                {this.state.area  > 0
+                &&(
+                    <div>
+                        <div className="titleHolder">
+                            <h2>Perimetro: {this.state.perimetro}</h2>
+                            <h2> Area: {this.state.area}</h2>
+                        </div>
+                    </div>
+                )
+                }
             </div>
 
         );

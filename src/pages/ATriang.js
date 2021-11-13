@@ -1,30 +1,74 @@
 import React,{Component} from "react";
 import "../assets/css/base.css"
 import {Link} from "react-router-dom";
+import Axios from "axios";
 
 class Fibo extends Component{
+    constructor() {
+        super();
+        this.state ={
+            perimetro:0,
+            area:0,
+            lado_d:0,
+            ladi_i:0,
+            base:0,
+            altura:0
+        }
+        this.onFinish=this.onFinish.bind(this)
+    }
+
+    async onFinish(e) {
+        e.preventDefault()
+
+        const url = 'https://something-usefull.herokuapp.com/api/trian'
+
+        const set = {
+            method: 'get',
+            url: url,
+            headers:{
+                'lado_izquierdo':this.state.lado_i,
+                'lado_derecho':this.state.lado_d,
+                'base':this.state.base,
+                'altura':this.state.altura
+            }
+        };
+
+        const response = await Axios(set)
+
+        const data = response.data
+        console.log(data)
+        this.setState({area:data.Area,perimetro:data.Perimetro})
+    }
     render(){
         return(
             <div className="base">
                 <div className="div1">
                     <h1>Area triangulo</h1>
                     <p>ingrese los datos solicitados</p>
-                    <form>
+                    <form onSubmit={this.onFinish}>
                         <div>
                             <label htmlFor="inp">Lado base : </label>
-                            <input type="number" name="inp"/></div>
+                            <input type="number" name="inp"  onChange={e => this.setState({base:e.target.value}) }/></div>
                         <div><label htmlFor="insta">Valor Altura:</label>
-                            <input type="number" name="insta"/></div>
+                            <input type="number" name="insta" onChange={e => this.setState({altura:e.target.value}) }/></div>
                         <div><label htmlFor="ins">Lado derecho:</label>
-                            <input type="number" name="ins"/></div>
+                            <input type="number" name="ins" onChange={e => this.setState({lado_d:e.target.value}) }/></div>
                         <div><label htmlFor="inst">Lado izquierdo:</label>
-                            <input type="number" name="inst"/></div>
-                        <button>Procesar</button>
-                        <p>Perimetro:</p>
-                        <p>Area:</p>
+                            <input type="number" name="inst"  onChange={e => this.setState({lado_i:e.target.value}) }/></div>
+                        <button type="submit">Procesar</button>
                         <Link to="/"><button>Volver</button></Link>
                     </form>
                 </div>
+                {this.state.area  > 0
+                &&(
+                    <div>
+                        <div className="titleHolder">
+                            <h2>Perimetro: {this.state.perimetro}</h2>
+                            <h2> Area: {this.state.area}</h2>
+                        </div>
+                    </div>
+                )
+                }
             </div>
 
         );
