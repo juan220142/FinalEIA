@@ -8,7 +8,8 @@ class ACirc extends Component{
         super();
         this.state ={
             total:-1,
-            radio:0
+            radio:0,
+            error1:""
         }
         this.onFinish=this.onFinish.bind(this)
     }
@@ -34,7 +35,7 @@ class ACirc extends Component{
 
         })
         console.log(data)
-        this.setState({area:data.Area,perimetro:data.Perimetro})
+        this.setState({area:data.Area,perimetro:data.Perimetro, error1:data.error1})
     }
     render(){
         return(
