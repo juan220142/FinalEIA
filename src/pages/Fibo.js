@@ -7,7 +7,7 @@ class Fibo extends Component{
     constructor() {
         super();
         this.state ={
-            total:0,
+            total:-1,
             numero:0
         }
         this.onFinish=this.onFinish.bind(this)
@@ -60,7 +60,9 @@ class Fibo extends Component{
                         </div>
                     </div>
                 )
-                }
+                } {this.state.total.length === 0 && (
+                <div><h1> ingresa el dato correspondiente</h1></div>
+            ) }
             </div>
 
         );

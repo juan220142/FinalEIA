@@ -7,7 +7,7 @@ class Fibo extends Component{
     constructor() {
         super();
         this.state ={
-            area:0,
+            area:-1,
             perimetro:0,
             base:0,
             altura:0
@@ -63,7 +63,11 @@ class Fibo extends Component{
                     </div>
                 )
                 }
+                {this.state.area ===0 && (
+                    <div>  <h1>ingresa los datos </h1></div>
+                )}
             </div>
+
 
         );
     }

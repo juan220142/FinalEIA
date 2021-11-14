@@ -7,7 +7,7 @@ class ACirc extends Component{
     constructor() {
         super();
         this.state ={
-            total:0,
+            total:-1,
             radio:0
         }
         this.onFinish=this.onFinish.bind(this)
@@ -56,6 +56,9 @@ class ACirc extends Component{
                     </div>
                 )
                 }
+                {this.state.area === 0 && (
+                    <div><h1>ingresa los datos correspondientes</h1></div>
+                )}
             </div>
 
         );
