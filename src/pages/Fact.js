@@ -40,7 +40,7 @@ class Facts extends Component{
                     <p></p>
                     <form onSubmit={this.onFinish}>
                         <label for="inp">Ingrese el número :</label>
-                        <input type="number" name="inp" onChange={e => this.setState({numero:e.target.value}) }/>
+                        <input type="number" name="inp" min={0} onChange={e => this.setState({numero:e.target.value}) }/>
                         <button type="submit">Procesar</button>
 
                         <Link to="/"><button>Volver</button></Link>

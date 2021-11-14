@@ -48,13 +48,11 @@ class Fibo extends Component{
                     <form onSubmit={this.onFinish}>
                         <div>
                             <label htmlFor="inp">Lado base : </label>
-                            <input type="number" name="inp"  onChange={e => this.setState({base:e.target.value}) }/></div>
-                        <div><label htmlFor="insta">Valor Altura:</label>
-                            <input type="number" name="insta" onChange={e => this.setState({altura:e.target.value}) }/></div>
+                            <input type="number" name="inp"  min={1} onChange={e => this.setState({base:e.target.value}) }/></div>
                         <div><label htmlFor="ins">Lado derecho:</label>
-                            <input type="number" name="ins" onChange={e => this.setState({lado_d:e.target.value}) }/></div>
+                            <input type="number" name="ins"  min={1} onChange={e => this.setState({lado_d:e.target.value}) }/></div>
                         <div><label htmlFor="inst">Lado izquierdo:</label>
-                            <input type="number" name="inst"  onChange={e => this.setState({lado_i:e.target.value}) }/></div>
+                            <input type="number" name="inst" min={1} onChange={e => this.setState({lado_i:e.target.value}) }/></div>
                         <button type="submit">Procesar</button>
                         <Link to="/"><button>Volver</button></Link>
                     </form>
