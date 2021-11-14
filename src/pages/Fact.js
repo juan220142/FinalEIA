@@ -7,7 +7,8 @@ class Facts extends Component{
         super();
         this.state ={
             total:0,
-            numero:0
+            numero:0,
+            error1:""
         }
         this.onFinish=this.onFinish.bind(this)
     }
@@ -26,9 +27,13 @@ class Facts extends Component{
             }
         };
 
-        const response = await Axios(set)
+        var data ={}
+        await Axios(set).then((response)=>{
+            data= response.data
+        }).catch((error)=>{
+            data.error1=error.response.data.data
 
-        const data = response.data.data
+        })
         console.log(data)
         this.setState({total:data})
     }
@@ -55,7 +60,7 @@ class Facts extends Component{
                     </div>
                 )
                 }
-
+                {this.state.error1}
             </div>
 
         );

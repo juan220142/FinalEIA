@@ -10,7 +10,8 @@ class Fibo extends Component{
             area:-1,
             perimetro:0,
             base:0,
-            altura:0
+            altura:0,
+            error1:""
         }
         this.onFinish=this.onFinish.bind(this)
     }
@@ -29,11 +30,16 @@ class Fibo extends Component{
             }
         };
 
-        const response = await Axios(set)
+        var data ={}
+        await Axios(set).then((response)=>{
+            data= response.data
+        }).catch((error)=>{
+            data.error1=error.response.data.data
 
-        const data = response.data
+        })
+
         console.log(data)
-        this.setState({area:data.Area,perimetro:data.Perimetro})
+        this.setState({area:data.Area,perimetro:data.Perimetro,error1:data.error1})
     }
     render(){
         return(
@@ -63,9 +69,7 @@ class Fibo extends Component{
                     </div>
                 )
                 }
-                {this.state.area ===0 && (
-                    <div>  <h3>ingresa los datos </h3></div>
-                )}
+                {this.state.error1}
             </div>
 
 

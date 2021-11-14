@@ -26,9 +26,13 @@ class ACirc extends Component{
             }
         };
 
-        const response = await Axios(set)
+        var data ={}
+        await Axios(set).then((response)=>{
+            data= response.data
+        }).catch((error)=>{
+            data.error1=error.response.data.data
 
-        const data = response.data
+        })
         console.log(data)
         this.setState({area:data.Area,perimetro:data.Perimetro})
     }
@@ -59,6 +63,7 @@ class ACirc extends Component{
                 {this.state.area === 0 && (
                     <div><h3>ingresa los datos correspondientes</h3></div>
                 )}
+                {this.state.error1}
             </div>
 
         );
