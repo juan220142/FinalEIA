@@ -11,7 +11,7 @@ class Menu extends Component{
                           <h1>seleccione la acción deseada</h1>
                     </div>
                     <div className="div2">
-                        <Link to="/fact"><button>Factorial</button></Link>
+                        <Link to="/fact"><button id="fact">Factorial</button></Link>
                         <Link to="/fib"><button>Fibonacci</button></Link>
                         <Link to="/circ"><button>Area circulo</button></Link>
                         <Link to="/triang"><button>Area triangulo</button></Link>
