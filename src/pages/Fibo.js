@@ -61,7 +61,7 @@ class Fibo extends Component{
                     </div>
                 )
                 } {this.state.total.length === 0 && (
-                <div><h3> ingresa el dato correspondiente</h3></div>
+                <div><h5> no se puede realizar el proceso,verifica los datos ingresados</h5></div>
             ) }
             </div>
 
