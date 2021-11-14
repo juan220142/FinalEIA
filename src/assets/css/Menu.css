@@ -36,7 +36,7 @@
     text-align: center;
 }
 .result {
-    flex-direction: row;
+    flex-direction: column;
 }
 .base2{
     text-align: center;
