@@ -49,9 +49,9 @@ class Fibo extends Component{
                         <div>
                             <label htmlFor="inp">Lado base : </label>
                             <input type="number" name="inp"  min={1} onChange={e => this.setState({base:e.target.value}) }/></div>
-                        <div><label htmlFor="ins">Lado derecho:</label>
+                        <div><label htmlFor="ins">Lado derecho :</label>
                             <input type="number" name="ins"  min={1} onChange={e => this.setState({lado_d:e.target.value}) }/></div>
-                        <div><label htmlFor="inst">Lado izquierdo:</label>
+                        <div><label htmlFor="inst">Lado izquierdo :</label>
                             <input type="number" name="inst" min={1} onChange={e => this.setState({lado_i:e.target.value}) }/></div>
                         <button type="submit">Procesar</button>
                         <Link to="/"><button>Volver</button></Link>
