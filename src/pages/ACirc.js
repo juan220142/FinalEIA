@@ -57,7 +57,7 @@ class ACirc extends Component{
                 )
                 }
                 {this.state.area === 0 && (
-                    <div><h1>ingresa los datos correspondientes</h1></div>
+                    <div><h3>ingresa los datos correspondientes</h3></div>
                 )}
             </div>
 

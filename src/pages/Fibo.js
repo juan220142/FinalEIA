@@ -45,7 +45,7 @@ class Fibo extends Component{
 
                 <form onSubmit={this.onFinish}>
                     <label for="inp">Ingrese el número :</label>
-                    <input type="number" name="inp" min={1} max={9999}onChange={e => this.setState({numero:e.target.value}) }/>
+                    <input type="number" name="inp" min={1} max={33}onChange={e => this.setState({numero:e.target.value}) }/>
                     <button type="submit">Procesar</button>
 
                     <Link to="/" ><button>Volver</button></Link>
@@ -54,14 +54,14 @@ class Fibo extends Component{
                 {this.state.total.length > 0
                 &&(
                     <div className="result">
-                        <div className="titleHolder">
-                            <h1>Resultado: </h1>
+                        <div>
+                            <h4>Resultado: </h4>
                             {this.state.total}
                         </div>
                     </div>
                 )
                 } {this.state.total.length === 0 && (
-                <div><h1> ingresa el dato correspondiente</h1></div>
+                <div><h3> ingresa el dato correspondiente</h3></div>
             ) }
             </div>
 

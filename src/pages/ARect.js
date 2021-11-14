@@ -64,7 +64,7 @@ class Fibo extends Component{
                 )
                 }
                 {this.state.area ===0 && (
-                    <div>  <h1>ingresa los datos </h1></div>
+                    <div>  <h3>ingresa los datos </h3></div>
                 )}
             </div>
 
