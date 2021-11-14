@@ -50,7 +50,7 @@ class Facts extends Component{
                 &&(
                     <div>
                         <div>
-                            <h1>Resultado: {this.state.total}</h1>
+                            <p id="factorial">Resultado: {this.state.total}</p>
                         </div>
                     </div>
                 )
