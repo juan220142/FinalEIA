@@ -45,7 +45,7 @@ class Fibo extends Component{
 
                 <form onSubmit={this.onFinish}>
                     <label for="inp">Ingrese el número :</label>
-                    <input type="number" name="inp" min={1} max={300}onChange={e => this.setState({numero:e.target.value}) }/>
+                    <input type="number" name="inp" min={1} max={300}onChange={e => this.setState({numero:e.target.value}) } placeholder={0}/>
                     <button type="submit">Procesar</button>
 
                     <Link to="/" ><button>Volver</button></Link>

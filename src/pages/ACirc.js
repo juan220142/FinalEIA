@@ -45,7 +45,7 @@ class ACirc extends Component{
                     <p>ingrese los datos solicitados</p>
                     <form onSubmit={this.onFinish}>
                         <label for="inp">Ingrese el radio :</label>
-                        <input type="number" name="inp" min={1} max={9999} onChange={e => this.setState({radio:e.target.value}) }/>
+                        <input type="number" name="inp" min={1} max={9999} onChange={e => this.setState({radio:e.target.value}) } placeholder={0}/>
                         <button type="submit">Procesar</button>
 
                         <Link to="/"><button>Volver</button></Link>

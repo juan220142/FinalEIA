@@ -35,7 +35,7 @@ class Facts extends Component{
 
         })
         console.log(data)
-        this.setState({total:data})
+        this.setState({total:data.data,error1:data.error1})
     }
     render(){
         return(
@@ -45,7 +45,7 @@ class Facts extends Component{
                     <p></p>
                     <form onSubmit={this.onFinish}>
                         <label for="inp">Ingrese el número :</label>
-                        <input type="number" name="inp" min={0} max={170} onChange={e => this.setState({numero:e.target.value}) }/>
+                        <input type="number" name="inp" min={0} max={170} onChange={e => this.setState({numero:e.target.value}) } placeholder={0}/>
                         <button  type="submit">Procesar</button>
 
                         <Link to="/"><button>Volver</button></Link>
